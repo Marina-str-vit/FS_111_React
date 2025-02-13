@@ -10,6 +10,7 @@ import Company from './NestedRoutes/Company';
 // import UserDetails from '../pages/UserDetails';
 // import UserPosts from './NestedRoutes/UserPosts';
 import { lazy, Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
 const Aim = lazy(() => import('./NestedRoutes/Aim'));
 const Users = lazy(() => import('../pages/Users'));
