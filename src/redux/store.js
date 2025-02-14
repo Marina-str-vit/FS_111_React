@@ -12,9 +12,11 @@ const persistConfig = {
   blacklist: ['step'],
   // whitelist: ['step'],
 };
-
+//         склад
 export const store = configureStore({
+//працівник на складі
   reducer: {
+//зони на складі
     counter: persistReducer(persistConfig, counterReducer),
     todos: todoReducer,
     filter: filterReducer,
