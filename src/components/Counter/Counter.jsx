@@ -28,7 +28,7 @@ export const Counter = () => {
 //dispatch({type: 'changeStep', payload:+e.target.value}) === type та payload == зарезервовані назви
   const handleChangeStep = e => {
   // у старій версії для цього потрібно в єкшені зробити функцію, зараз лише кріетЄкшн
-    dispatch(changeStep(+e.target.value)); 
+    dispatch(changeStep(+e.target.value)); // тут payload: +e.target.value
   };
 
   return (
