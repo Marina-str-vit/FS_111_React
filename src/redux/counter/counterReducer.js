@@ -5,7 +5,7 @@ const initialState = {
   counter: 0,
   step: 1,
 };
-
+// до назви обов'язково додаємо слово Reducer !!!
 // зона відповідальності      частина склада        дії на складі, те що зможе робити
 export const counterReducer = (state = initialState, action) => {
 //приймає фуру по типу
