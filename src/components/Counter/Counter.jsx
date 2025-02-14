@@ -21,11 +21,13 @@ export const Counter = () => {
   };
 //%% замовник хоче видалити значення, робить все адмін dispatch ч/з робітника reducer
   const handleResetClick = () => {
-    dispatch(reset());
+    dispatch(reset()); // які б зміни не були, поверне все до початкового значення
   };
 //%% все ще лише бажання замовника, а робить все dispatch
+// приїзжає фура і вигружає новий товар на склад payload - це навантаження, з ККомпонента може передаватися: об'єкт(якщо, щось створюю), строка(змінюю щось), ідентифікатор(якщо, щось видаляю), булеан
+//dispatch({type: 'changeStep', payload:+e.target.value}) === type та payload == зарезервовані назви
   const handleChangeStep = e => {
-    dispatch(changeStep(+e.target.value));
+    dispatch(changeStep(+e.target.value)); //для цього потрібно в єкшені зробити функцію
   };
 
   return (
