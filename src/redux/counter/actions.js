@@ -3,7 +3,7 @@ import { createAction } from '@reduxjs/toolkit';
 // export const reset = { type: 'reset' };
 // export const increment = { type: 'INCREMENT' };
 // export const decrement = { type: 'DECREMENT' };
-
+// функц. для зміни значення step
 // export const changeStep = newStep => {
 //   return {
 //     type: 'changeStep',
