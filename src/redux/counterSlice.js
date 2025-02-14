@@ -15,7 +15,7 @@ const initialState = {
   step: 1,
   counter: 0,
 };
-
+// базове налаштування, відповідає лише за свою зону counter
 const slice = createSlice({
   name: 'counter',
   initialState,
@@ -35,5 +35,7 @@ const slice = createSlice({
   },
 });
 
+//тут вже ми відправляємо у стор для роботи
 export const counterReducer = slice.reducer;
+//ці міні-функції буду використовувати замість констант з action.js, зменшили кількість файлів, та змінити у компоненті шлях доступу до Ешенів
 export const { increment, decrement, reset, changeStep } = slice.actions;
