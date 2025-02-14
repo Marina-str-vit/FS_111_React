@@ -1,5 +1,5 @@
 import { createAction } from '@reduxjs/toolkit';
-
+// зберігаємо значення, щоб потім легше була перевірка
 // export const reset = { type: 'reset' };
 // export const increment = { type: 'INCREMENT' };
 // export const decrement = { type: 'DECREMENT' };
