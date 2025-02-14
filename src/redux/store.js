@@ -12,6 +12,8 @@ const persistConfig = {
   blacklist: ['step'],
   // whitelist: ['step'],
 };
+
+//BLL - бізнес-логіка
 //         склад     слово з якого створюється склад 
 export const store = configureStore({
 //працівники на складі
