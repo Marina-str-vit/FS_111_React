@@ -9,6 +9,7 @@ import { persistor, store } from './redux/store';
 import { StrictMode } from 'react';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+// розповідаю, де знаходиться наш склад
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <App />
