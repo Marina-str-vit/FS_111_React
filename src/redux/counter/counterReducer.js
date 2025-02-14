@@ -10,14 +10,16 @@ const initialState = {
 export const counterReducer = (state = initialState, action) => {
 //приймає фуру по типу
   switch (action.type) {
-  //подію яку він може виконати == збільшити
+  //подію яку він може виконати == збільшити, коли нам прийшло замовлення зробити increment
     case increment.type: {
       return {
+  // то потрібно зберегти весь старий стан
         ...state,
+    // збільшити стан на step
         counter: state.counter + state.step,
       };
     }
-  //подію яку він може виконати == зменшити 
+  //подію яку він може виконати == зменшити, також спочатку зберегти старий стан, а потім зробити якусь операцію 
     case decrement.type: {
       return {
         ...state,
