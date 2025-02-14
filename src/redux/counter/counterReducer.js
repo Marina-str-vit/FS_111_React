@@ -8,6 +8,7 @@ const initialState = {
 // BLL
 export const counterReducer = (state = initialState, action) => {
   switch (action.type) {
+// .type == підв'язуємося до нашого actions
     case increment.type: {
       return {
         ...state,
@@ -28,7 +29,7 @@ export const counterReducer = (state = initialState, action) => {
     case changeStep.type: {
       return {
         ...state,
-        step: action.payload,
+        step: action.payload, // є доступ до інпуту, тому можемо змінити step
       };
     }
 
