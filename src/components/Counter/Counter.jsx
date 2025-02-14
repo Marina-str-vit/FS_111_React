@@ -13,7 +13,7 @@ export const Counter = () => {
 //%% замовник хоче збільшити значення, тоді ч/з dispatch йдемо у counter.js файл і дивимося, як це зробити
   const handlePlusClick = () => {
 //dispatch({type: 'INKREMENT'}) це початкове пояснення
-    dispatch(increment());
+    dispatch(increment()); // тепер це функція!! тут payload немає
   };
 //%% замовник хоче зменшити значення, тоді ч/з dispatch йдемо у counter.js файл і дивимося, як це зробити
   const handleMinusClick = () => {
@@ -27,7 +27,8 @@ export const Counter = () => {
 // приїзжає фура і вигружає новий товар на склад payload - це навантаження, з ККомпонента може передаватися: об'єкт(якщо, щось створюю), строка(змінюю щось), ідентифікатор(якщо, щось видаляю), булеан
 //dispatch({type: 'changeStep', payload:+e.target.value}) === type та payload == зарезервовані назви
   const handleChangeStep = e => {
-    dispatch(changeStep(+e.target.value)); //для цього потрібно в єкшені зробити функцію
+  // у старій версії для цього потрібно в єкшені зробити функцію, зараз лише кріетЄкшн
+    dispatch(changeStep(+e.target.value)); 
   };
 
   return (
