@@ -9,9 +9,11 @@ const slice = createSlice({
   initialState,
   reducers: {
     deleteTodo: (state, action) => {
+    // все, що передаю в функ. виклику діспатч в () потрапляє в action.payload
       state.items = state.items.filter(item => item.id !== action.payload);
     },
     addTodo: (state, action) => {
+    // півд капотом бібліотека immer, тому ніяких розсипать не потрібно
       state.items.push(action.payload);
     },
     editTodo: (state, action) => {
