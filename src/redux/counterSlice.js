@@ -17,6 +17,7 @@ const initialState = {
 };
 // базове налаштування, відповідає лише за свою зону counter
 const slice = createSlice({
+// назва слайсу  name: 'counter'
   name: 'counter',
   initialState,
   reducers: {
