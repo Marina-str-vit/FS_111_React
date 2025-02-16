@@ -27,6 +27,7 @@ const slice = createSlice({
       state.counter -= state.step;
     },
     reset: (state, action) => {
+  //повертаюсь до початкового значення
       return initialState;
     },
     changeStep: (state, action) => {
