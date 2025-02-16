@@ -25,6 +25,7 @@ const Item = ({ isCompleted, todo, id, isFavorite }) => {
             />
           </div>
         ) : (
+      //можу редагувати прямо в тексті
           <p onClick={() => setEditMode(true)}>
             {isFavorite && <FaStar color='gold' />} {todo}{' '}
           </p>
