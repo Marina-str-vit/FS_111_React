@@ -6,11 +6,12 @@ import { addTodo } from '../../redux/todoSlice';
 export const AddForm = () => {
   const initialValues = { todo: '' };
   const dispatch = useDispatch();
-
+// values - це всі значення нашої форми!! вони знаходяться в initialValues в Formik
   const onSubmit = (values, options) => {
     const newObj = {
       todo: values.todo,
       isCompleted: false,
+      // crypto.randomUUID() - це вбудована в ноде.джс функціональнісь, як сеттаймаут
       id: crypto.randomUUID(),
     };
     dispatch(addTodo(newObj));
