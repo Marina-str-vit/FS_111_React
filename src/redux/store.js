@@ -9,7 +9,9 @@ const persistConfig = {
   key: 'counter-persist',
   version: 1,
   storage,
+  // те що НЕ буде зберігатися в локалсторідже. Якщо підти в Аплікейшн, локалСторідж, вибрати персіст, то внизу побачимо дані, що ми зберигли
   blacklist: ['step'],
+  //зберігає лише те, що ми вкажимо
   // whitelist: ['step'],
 };
 
@@ -24,8 +26,10 @@ export const store = configureStore({
     filter: filterReducer,
   },
   middleware: getDefaultMiddleware =>
+    // промежуточное ПО, воно потрібно для бекенда
     getDefaultMiddleware({
       serializableCheck: {
+    //це ми ігноруємо, бо воно нам не потрібно, а в прогі воно указано, бо вони працюють без нас
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
