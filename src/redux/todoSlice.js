@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-
+//базова заглушка, щоб було видно, хоч якийсь інтерфейс
 const initialState = {
   items: [{ id: 1, todo: 'Learn redux', isCompleted: false }],
 };
