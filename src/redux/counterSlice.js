@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// 1. Створити початковий стан
-// 2. Створити слайс
-// 3. Дати йому імʼя
+// 1. Створити початковий стан initialState
+// 2. Створити слайс createSlice
+// 3. Дати йому імʼя  name: 'counter'
 // 4. Передати йому стан
 // 5. Прописати reducers: {}
 // 6. Експортувати counterReducer = slice.reducer
-// 7. Підключити в сторі новий слайс замість редьюсера старого
+// 7. Підключити в сторі новий слайс замість редьюсера старого, йти до файлу стор
 // 8. Додати функції у редюсерс
 // 9. Експортувати екшени (наші маленькі фукнції з reducers) з slice.actions
 // 10. Використати нові функції в компонентах вже імпортуючи їх з слайсу
@@ -19,7 +19,7 @@ const initialState = {
 const slice = createSlice({
 // назва слайсу  name: 'counter'
   name: 'counter',
-  initialState,
+  initialState,  // 4п. плану
   reducers: {
     increment: (state, action) => {
       state.counter += state.step;
@@ -37,7 +37,7 @@ const slice = createSlice({
   },
 });
 
-//тут вже ми відправляємо у стор для роботи
+//тут вже ми відправляємо у стор для роботи 
 export const counterReducer = slice.reducer;
 //ці міні-функції буду використовувати замість констант з action.js, зменшили кількість файлів, та змінити у компоненті шлях доступу до Ешенів
 export const { increment, decrement, reset, changeStep } = slice.actions;
